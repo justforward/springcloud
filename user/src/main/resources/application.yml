@@ -1,0 +1,12 @@
+server:
+  port: 2255
+
+spring:
+  application:
+    name: user
+
+#服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:2244/eureka

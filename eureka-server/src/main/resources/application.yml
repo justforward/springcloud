@@ -1,19 +1,16 @@
 server:
   port: 2244
 
-#定义spring应用名称，它是一个微服务的名称，一个微服务可以拥有多个实例
-spring:
-  application:
-    name: eureka-server
 eureka:
-  client:
-    #服务自身就是治理中心，这个设置false，取消注册
-    register-with-eureka: false
-    #取消服务获取，
-    fetch-registry: false
-    #服务注册域地址
-   # service-url:
-   #  defaultZone: http://127.0.0.1:2244/eureka/
   instance:
-    #服务治理中心服务器IP：这里直接指定本地的机器
-    hostname: 127.0.0.1
+    hostname: eureka2244.com #eureka服务端的实例名称
+  client:
+    register-with-eureka: false     #false表示不向注册中心注册自己。
+    fetch-registry: false     #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+
+    #service-url:
+
+      #集群指向其它eureka
+      #  defaultZone: http://eureka7002.com:7002/eureka/
+      #单机就是7001自己
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
