@@ -1,22 +1,20 @@
-package com.study.control;
-
-import com.study.common.response.ResultMessage;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
+package com.study.product.control;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
+
+import com.study.common.response.ResultMessage;
 
 /**
  * @author wangtan
  * @Date 2020/12/16
  */
 @RestController
-@RequestMapping("/product")
+@RequestMapping("/product/")
 public class ProductController {
 
     /**
@@ -36,7 +34,7 @@ public class ProductController {
      * @param amount
      * @return
      */
-    @GetMapping("/purchase/{userId}/{productId}/{amount}")
+    @PostMapping("purchase/{userId}/{productId}/{amount}")
     public ResultMessage purchaseProduct(@PathVariable("userId") Long userId,
                                          @PathVariable("productId") Long productId,
                                          @PathVariable("amount")Double amount) {
@@ -53,6 +51,10 @@ public class ProductController {
         System.out.println(rm.getMessage());
         System.out.println("交易记录信息");
         return new ResultMessage(true,"交易成功");
+    }
 
+    @GetMapping("get")
+    public void get(){
+        System.out.println("请求成功");
     }
 }
