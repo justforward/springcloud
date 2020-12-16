@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: fund
+  profiles:
+    active: peer2
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:2244/eureka/,http://localhost:2245/eureka/
