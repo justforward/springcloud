@@ -1,6 +1,6 @@
 package com.study.fund.control;
 
-import com.study.fund.result.response.ResultMessage;
+import com.study.common.response.ResultMessage;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

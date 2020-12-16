@@ -1,4 +1,4 @@
-package com.study.fund.result.response;
+package com.study.common.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
