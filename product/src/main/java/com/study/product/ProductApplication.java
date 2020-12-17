@@ -19,10 +19,10 @@ public class ProductApplication {
     //1.负载均衡：它会使用某种策略进行路由，路由到具体的微服务实例上，在默认情况下，使用的是轮询策略。
     @LoadBalanced
     //创建spring bean
-    @Bean
-    public RestTemplate initRestTemplate(){
-        return new RestTemplate();
-    }
+//    @Bean
+//    public RestTemplate initRestTemplate(){
+//        return new RestTemplate();
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(ProductApplication.class, args);

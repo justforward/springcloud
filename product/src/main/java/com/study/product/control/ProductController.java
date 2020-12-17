@@ -52,9 +52,4 @@ public class ProductController {
         System.out.println("交易记录信息");
         return new ResultMessage(true,"交易成功");
     }
-
-    @GetMapping("get")
-    public void get(){
-        System.out.println("请求成功");
-    }
 }

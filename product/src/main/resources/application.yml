@@ -8,3 +8,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:2244/eureka/,http://localhost:2245/eureka/
+    #是否检索服务实例清单，默认值true
+    fetch-registry: true
+
+
+  instance:
+    #微服务实例超市失效秒数，默认值为90s
+    #如果续约超时。Eureka会将微服务实例剔除
+    lease-expiration-duration-in-seconds: 90
+    #间隔对应的秒数执行一次续约服务，默认值为30s
+    lease-renewal-interval-in-seconds: 30
+
+
