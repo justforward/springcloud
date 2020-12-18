@@ -8,12 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication(//扫描装配bean
         scanBasePackages = "com.study.fund")
 @EnableDiscoveryClient()
-@EnableFeignClients(//扫描
+@EnableFeignClients(//扫描装配OpenFeign接口到IOC容器中
         basePackages = "com.study.fund")
 public class FundApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(FundApplication.class, args);
     }
-
 }
