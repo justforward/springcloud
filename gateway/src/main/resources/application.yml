@@ -1,0 +1,18 @@
+server:
+  port: 3001
+
+#spring应用（微服务）名称
+spring:
+  application:
+    name: gateway
+
+#  cloud:
+#    gateway:
+#      routes:
+#        -id :fund
+#        uri: http://localhost:3322
+#        #断言配置
+#        predicates:
+#          - Path=/r4j/**
+#          - Before = 2020-12-22T19:07:18.453+08:00[Asia/Shanghai]
+
